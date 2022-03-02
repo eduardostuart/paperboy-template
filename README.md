@@ -32,6 +32,8 @@ MAIL_TO="email@domain.com"
 5. Update `.github/workflows/cron.yml` if you want to change the frequency or time that you want to receive the email.
 6. If you just want to test, trigger the `.github/workflows/manual.yml` GitHub Action.
 
+**Example**: https://github.com/eduardostuart/paperboy-eduardo
+
 ## License
 
 This code is distributed under the terms of MIT license.
