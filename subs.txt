@@ -1,2 +1,2 @@
 # Subscriptions
-# https://s.tuart.dev/feed
+https://s.tuart.dev/feed.xml
