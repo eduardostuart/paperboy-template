@@ -1,0 +1,20 @@
+name: Deliver
+on:
+  schedule:
+    # Run every day at 6AM
+    - cron: "0 6 * * *"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run
+        run: |
+          curl -s "https://raw.githubusercontent.com/eduardostuart/paperboy/main/scripts/install.sh" | bash
+          ./paperboy deliver --verbose ${{ secrets.MAIL_TO }} ./subs.txt ./template.hbs
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
