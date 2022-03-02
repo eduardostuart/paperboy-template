@@ -3,3 +3,4 @@
 https://blog.laravel.com/feed
 https://news.vuejs.org/feed.xml
 https://blog.rust-lang.org/feed.xml
+https://feed.laravel-news.com/
